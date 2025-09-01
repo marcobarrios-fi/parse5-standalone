@@ -1,0 +1,32 @@
+{
+  "name": "parse5-standalone",
+  "description": "Parse5 as a standalone ES6 module.",
+  "version": "8.0.0",
+  "type": "module",
+  "main": "node_modules/parse/dist/index.js",
+  "keywords": [
+    "parse5",
+    "parser",
+    "serializer",
+    "html5",
+    "es6",
+    "module",
+    "dist"
+  ],
+  "author": {
+    "name": "Ivan Nikulin"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "sudo npm install && rollup --config rollup-config.js && terser dist/parse5-8.0.0.dist.mjs --compress --mangle --output dist/parse5-8.0.0.dist.min.mjs"
+  },
+    "dependencies": {
+    "entities": "^6.0.1",
+    "parse5": "8.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^4.50.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "terser": "^5.19.4"
+  }
+}
